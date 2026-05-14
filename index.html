@@ -1,0 +1,276 @@
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalVault | Affiliate Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4f46e5; /* Indigo */
+            --primary-dark: #3730a3;
+            --secondary: #10b981; /* Emerald */
+            --text-main: #0f172a;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        .sidebar-item {
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-item:hover {
+            background-color: #f1f5f9;
+            color: var(--primary);
+        }
+
+        .sidebar-item.active {
+            background-color: #eef2ff;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-8">
+                    <a href="#" class="text-xl font-bold flex items-center gap-2 text-indigo-600">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+                            <i class="fas fa-cube text-sm"></i>
+                        </div>
+                        <span>DV<span class="text-slate-900">Vault</span></span>
+                    </a>
+                    <div class="hidden md:flex relative w-80">
+                        <input type="text" placeholder="Cari produk digital..." class="w-full bg-slate-100 border-none rounded-lg py-2 px-10 text-sm focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all">
+                        <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 text-sm font-medium">
+                    <a href="#" class="text-slate-600 hover:text-indigo-600">Bantuan</a>
+                    <a href="#" class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-all">Member Area</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 mt-8">
+        
+        <aside class="w-full lg:w-60 flex-shrink-0">
+            <div class="bg-white rounded-xl border border-slate-200 overflow-hidden sticky top-24">
+                <div class="p-4 border-b border-slate-100 bg-slate-50/50">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Kategori Produk</h3>
+                </div>
+                <nav class="p-2 space-y-1">
+                    <a href="#" class="sidebar-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+                        <i class="fas fa-th-large w-5 opacity-70"></i> Semua Produk
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-book w-5 opacity-70"></i> Ebook & Panduan
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-video w-5 opacity-70"></i> Video Kursus
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-code w-5 opacity-70"></i> Script & Web App
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-palette w-5 opacity-70"></i> Template Desain
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-plug w-5 opacity-70"></i> Plugin & Extension
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-mobile-alt w-5 opacity-70"></i> Aplikasi Mobile
+                    </a>
+                    <a href="#" class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-600">
+                        <i class="fas fa-headphones w-5 opacity-70"></i> Audio & Musik
+                    </a>
+                </nav>
+                <div class="p-4 mt-2 border-t border-slate-100">
+                    <a href="#" class="flex items-center gap-2 text-xs font-bold text-emerald-600 hover:underline">
+                        <i class="fas fa-percent"></i> Promo Minggu Ini
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 pb-20">
+            
+            <!-- Simple Static Banner -->
+            <div class="bg-indigo-600 rounded-2xl p-8 md:p-12 text-white mb-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="max-w-md">
+                    <h2 class="text-3xl font-extrabold mb-4 leading-tight">Mulai Bisnis Digital Anda Sekarang.</h2>
+                    <p class="text-indigo-100 mb-6 text-sm md:text-base opacity-90">Dapatkan akses ke ratusan produk digital berkualitas tinggi untuk mempercepat langkah sukses Anda.</p>
+                    <div class="flex gap-3">
+                        <button class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-emerald-900/20">Lihat Katalog</button>
+                        <button class="bg-white/10 hover:bg-white/20 text-white px-6 py-2.5 rounded-lg font-bold text-sm transition-all">Pelajari Affiliate</button>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <i class="fas fa-rocket text-[120px] text-white/10"></i>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-lg font-bold text-slate-800">Rekomendasi Terbaik</h2>
+                <div class="flex gap-2">
+                    <span class="text-xs text-slate-400">Urutkan:</span>
+                    <select class="text-xs font-bold bg-transparent outline-none cursor-pointer text-indigo-600">
+                        <option>Terbaru</option>
+                        <option>Paling Laris</option>
+                        <option>Harga Rendah</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden flex flex-col">
+                    <div class="aspect-video bg-slate-100 relative">
+                        <img src="https://placehold.co/600x400/4f46e5/white?text=Ebook+Copywriting" alt="Product" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-white px-2 py-1 rounded text-[10px] font-bold text-slate-700 shadow-sm">EBOOK</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="font-bold text-slate-800 mb-2 leading-snug line-clamp-2">Jago Copywriting: Teknik Menjual Lewat Tulisan</h3>
+                        <div class="flex items-center gap-1 text-amber-400 text-[10px] mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-slate-400 ml-1">(150+)</span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-lg font-extrabold text-indigo-600">Rp 97.000</span>
+                                <span class="text-xs text-slate-400 line-through">Rp 250k</span>
+                            </div>
+                            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-bold transition-all">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden flex flex-col">
+                    <div class="aspect-video bg-slate-100 relative">
+                        <img src="https://placehold.co/600x400/0f172a/white?text=Kursus+Video" alt="Product" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-white px-2 py-1 rounded text-[10px] font-bold text-slate-700 shadow-sm">VIDEO</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="font-bold text-slate-800 mb-2 leading-snug line-clamp-2">Video Editing Masterclass dengan CapCut & Premiere</h3>
+                        <div class="flex items-center gap-1 text-amber-400 text-[10px] mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-slate-400 ml-1">(89)</span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-lg font-extrabold text-indigo-600">Rp 149.000</span>
+                                <span class="text-xs text-slate-400 line-through">Rp 350k</span>
+                            </div>
+                            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-bold transition-all">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden flex flex-col">
+                    <div class="aspect-video bg-slate-100 relative">
+                        <img src="https://placehold.co/600x400/10b981/white?text=SaaS+Script" alt="Product" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-white px-2 py-1 rounded text-[10px] font-bold text-slate-700 shadow-sm">SCRIPT</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="font-bold text-slate-800 mb-2 leading-snug line-clamp-2">Script Website Marketplace Digital Auto-Pilot</h3>
+                        <div class="flex items-center gap-1 text-amber-400 text-[10px] mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-slate-400 ml-1">(210+)</span>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span class="text-lg font-extrabold text-indigo-600">Rp 299.000</span>
+                                <span class="text-xs text-slate-400 line-through">Rp 700k</span>
+                            </div>
+                            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-bold transition-all">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="text-xl font-bold flex items-center gap-2 text-indigo-600 mb-4">
+                        <div class="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center text-white">
+                            <i class="fas fa-cube text-[10px]"></i>
+                        </div>
+                        <span>DVVault</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">Penyedia aset digital premium untuk kreator dan pebisnis online. Bangun masa depan digital Anda bersama kami.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 mb-4">Perusahaan</h4>
+                    <ul class="text-slate-500 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-indigo-600">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Blog Digital</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Karir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 mb-4">Dukungan</h4>
+                    <ul class="text-slate-500 text-sm space-y-2">
+                        <li><a href="#" class="hover:text-indigo-600">Pusat Bantuan</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 mb-4">Langganan</h4>
+                    <p class="text-slate-500 text-xs mb-4">Dapatkan info produk terbaru dan promo eksklusif.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Email Anda" class="bg-slate-100 border-none rounded-lg py-2 px-3 text-xs flex-1 outline-none">
+                        <button class="bg-indigo-600 text-white p-2 rounded-lg"><i class="fas fa-paper-plane text-xs"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-400 text-xs font-medium">&copy; 2024 DigitalVault Affiliate. All rights reserved.</p>
+                <div class="flex gap-6 text-slate-400">
+                    <a href="#" class="hover:text-indigo-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-indigo-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-indigo-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
