@@ -69,3 +69,28 @@ body {
     background-color: #2980b9;
     transform: scale(1.05);
 }
+
+/* Bagian Layanan Grid */
+.layanan {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: white;
+}
+
+.kotak {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1; /* Membuat kotak membagi ruang yang sama */
+    max-width: 300px;
+    border-top: 5px solid #3498db;
+    transition: 0.3s;
+}
+
+.kotak:hover {
+    transform: translateY(-10px);
+}
